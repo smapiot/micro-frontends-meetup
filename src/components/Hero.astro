@@ -1,0 +1,96 @@
+---
+import "./StyleUtils.astro";
+import { siteDescription, siteName } from '../data/meta';
+---
+
+<style>
+  .wrapper {
+    padding-top: 30%;
+  }
+
+  h1 {
+    font-size: 52px;
+    line-height: 1.15;
+    letter-spacing: -0.05em;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 1rem 25px;
+    text-shadow: #000 0 0 10px;
+  }
+
+  .info {
+    font-size: 20px;
+    line-height: 1.4;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: var(--space-8x);
+    color: var(--brand);
+  }
+
+  .description {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.4;
+    text-align: center;
+    margin: 30px auto 30px;
+    color: var(--secondary-color);
+    max-width: 355px;
+  }
+
+  .description-separator {
+    height: 24px;
+    width: 1px;
+    background: var(--secondary-color);
+    margin: 0 var(--space-4x);
+  }
+
+  .info :global(p) {
+    margin: 0;
+  }
+
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 100px;
+      line-height: 1;
+      font-weight: 800;
+      margin: 0 0px 40px;
+    }
+
+    .info {
+      font-size: 24px;
+      margin-bottom: 80px;
+    }
+
+    .description {
+      font-size: var(--space-8x);
+      max-width: 531px;
+      margin: 40px auto;
+    }
+  }
+
+  .wrapper {
+    background: url('/cover-image.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top center;
+  }
+</style>
+<div class="wrapper">
+  <h2 class="appear appear-third show-on-mobile description">
+    {siteDescription}
+  </h2>
+  <h1 class="appear appear-third">
+    <br class="show-on-desktop" />
+    {siteName} Meetup
+  </h1>
+  <h2 class="appear appear-third show-on-tablet description">
+    {siteDescription}
+  </h2>
+  <div class="appear appear-fourth info">
+    <p>
+      Streamed <strong>Live</strong> & <strong>On-Demand</strong>
+    </p>
+  </div>
+</div>

@@ -1,0 +1,122 @@
+---
+import { navigation } from "../data/meta";
+---
+
+<style>
+  .nav-overlay {
+    position: fixed;
+    z-index: 100;
+    top: 72px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-item {
+    font-size: var(--space-8x);
+    letter-spacing: -0.05em;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: var(--space-4x);
+    line-height: 1.5;
+    width: fit-content;
+  }
+
+  .nav-item:focus {
+    outline: 1px dotted #fff;
+  }
+
+  .nav-active {
+    color: #fff;
+    background: linear-gradient(90deg, var(--brand), var(--brand)) left bottom
+      transparent no-repeat;
+    background-size: 100% 2px;
+  }
+
+  .button {
+    margin: 0;
+    margin-right: var(--space-4x);
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .icon {
+    color: #fff;
+    display: block;
+  }
+
+  body:not(.menu-open) .is-open {
+    display: none;
+  }
+
+  body.menu-open .not-open {
+    display: none;
+  }
+
+  @media (min-width: 1032px) {
+    .button {
+      display: none;
+    }
+  }
+</style>
+<script>
+  document.querySelector("#mobile-menu")?.addEventListener("click", (ev) => {
+    document.body.classList.toggle("menu-open");
+  });
+</script>
+<button aria-label="Mobile Menu" id="mobile-menu" type="button" class="button">
+  <svg
+    viewBox="0 0 24 24"
+    width="24"
+    height="24"
+    stroke="currentColor"
+    stroke-width="1.5"
+    stroke-inecap="round"
+    stroke-linejoin="round"
+    fill="none"
+    shape-rendering="geometricPrecision"
+    class="icon is-open"
+  >
+    <path d="M18 6L6 18"></path>
+    <path d="M6 6l12 12"></path>
+  </svg>
+  <svg
+    viewBox="0 0 24 24"
+    width="24"
+    height="24"
+    stroke="currentColor"
+    stroke-width="1.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    fill="none"
+    shape-rendering="geometricPrecision"
+    class="icon not-open"
+  >
+    <path d="M3 12h18"></path>
+    <path d="M3 6h18"></path>
+    <path d="M3 18h18"></path>
+  </svg>
+</button>
+<div class="nav-overlay is-open">
+  <nav class="nav">
+    {
+      navigation.map(({ name, route }) => (
+        <a class="nav-item" href={route}>
+          {name}
+        </a>
+      ))
+    }
+  </nav>
+</div>

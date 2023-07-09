@@ -1,0 +1,83 @@
+---
+import Layout from "../layouts/TextLayout.astro";
+import Header from "../components/Header.astro";
+---
+
+<style>
+  p {
+    margin-left: 24px;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    color: var(--secondary-color);
+    max-width: 900px;
+    text-align: justify;
+  }
+
+  h2 {
+    margin-left: 24px;
+    margin-top: 1.5rem;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: -0.05em;
+    font-weight: 800;
+  }
+
+  @media (min-width: 768px) {
+    p, h2 {
+      margin-left: var(--space-8x);
+    }
+  }
+</style>
+
+<Layout title="Imprint">
+  <Header
+    hero="Legal Notice / Imprint"
+    description="Information about the owner of the website."
+  />
+
+  <h2>Information provided according to sec. 5 German Telemedia Act (TMG)</h2>
+
+  <p>
+    smapiot GmbH<br>
+    Weidenstrasse 14a<br>
+    85662 Hohenbrunn<br>
+    Germany
+  </p>
+
+  <h2>Contact</h2>
+
+  <p>
+    Telephone:+49 (0) 8102 9998476<br>
+    Fax: +49 (0) 8102 9984395<br>
+    E-Mail: info@smapiot.com
+  </p>
+
+  <h2>Represented by</h2>
+
+  <p>
+    Lothar Schöttner
+  </p>
+
+  <h2>Register entry</h2>
+
+  <p>
+    Registering court: District Court Munich<br>
+    Registration number: HRB 214798
+  </p>
+
+  <h2>VAT number</h2>
+
+  <p>
+    VAT ID number according to sec. 27a German Value Added Tax Act:<br>
+    DE297589818
+  </p>
+
+  <h2>Information reg. Professional Indemnity Insurance</h2>
+
+  <p>
+    Name and residence of insurer:<br>
+    Allianz Versicherungs-AG<br>
+    10900 Berlin<br>
+    Scope of insurance: Worldwide with exception of US and Canada
+  </p>
+</Layout>

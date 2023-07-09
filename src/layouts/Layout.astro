@@ -1,0 +1,163 @@
+---
+import GlobalStyles from "../components/GlobalStyles.astro";
+import MobileMenu from "../components/MobileMenu.astro";
+import Footer from "../components/Footer.astro";
+import Logo from "../components/Logo.astro";
+import { navigation } from "../data/meta";
+
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Workshops to empower everyone with the skills to build and use micro frontend solutions."
+    />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <title>Micro Frontend Workshops - {title}</title>
+    <GlobalStyles />
+    <style>
+      .background {
+        background: #000;
+        color: #fff;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .page {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        flex: 1;
+      }
+
+      .main {
+        flex: 1;
+        display: flex;
+      }
+
+      .full {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: var(--sidebar);
+        border-bottom: 1px solid var(--accents-7);
+        height: var(--header-height);
+        z-index: 2;
+      }
+
+      .header-logos {
+        max-width: 200px;
+        display: flex;
+        align-items: center;
+        margin: var(--space-2x) var(--space-4x);
+      }
+
+      .header-right {
+        margin: var(--space-2x) var(--space-4x);
+        margin-right: 5rem;
+        display: none;
+      }
+
+      @media screen and (min-width: 770px) {
+        .header-right {
+          display: initial;
+        }
+      }
+
+      .tabs {
+        height: 100%;
+        display: none;
+      }
+
+      @media screen and (min-width: 1032px) {
+        .tabs {
+          display: initial;
+        }
+
+        .tabs > a:nth-child(2),
+        .tabs > a:nth-child(3),
+        .tabs > a:nth-child(4) {
+          display: inline-flex;
+        }
+      }
+
+      .tab {
+        text-transform: uppercase;
+        padding: var(--space-4x);
+        font-size: 14px;
+        color: var(--secondary-color);
+        font-weight: 700;
+        letter-spacing: -0.05em;
+        height: 100%;
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      .tab:hover,
+      .tab:focus,
+      .tab:active {
+        color: #fff;
+      }
+
+      .tab-active {
+        color: #fff;
+        background: linear-gradient(90deg, var(--brand), var(--brand)) left
+          bottom transparent no-repeat;
+        background-size: 100% 1px;
+      }
+
+      .logo {
+        display: flex;
+        width: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="background">
+      <header class="header">
+        <div class="header-logos">
+          <MobileMenu />
+          <a class="logo" href="/">
+            <Logo />
+          </a>
+        </div>
+
+        <div class="tabs">
+          {
+            navigation.map(({ name, route }) => (
+              <a href={route} class="tab">
+                {name}
+              </a>
+            ))
+          }
+        </div>
+
+        <div></div>
+      </header>
+      <!-- <ViewSource /> -->
+      <div class="page">
+        <main class="main">
+          <div class="full"><slot /></div>
+        </main>
+        <Footer />
+      </div>
+    </div>
+  </body>
+</html>

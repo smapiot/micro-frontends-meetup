@@ -1,0 +1,51 @@
+{
+  "routes": [
+    {
+      "route": "/.auth/login/twitter",
+      "statusCode": 404
+    },
+    {
+      "route": "/.auth/login/github",
+      "statusCode": 404
+    },
+    {
+      "route": "/admin-area",
+      "allowedRoles": ["administrator"]
+    },
+    {
+      "route": "/admin-area/*",
+      "rewrite": "/admin-area",
+      "allowedRoles": ["administrator"]
+    },
+    {
+      "route": "/api/send-mail",
+      "methods": ["POST"],
+      "allowedRoles": ["administrator"]
+    }
+  ],
+  "auth": {
+    "rolesSource": "/api/get-roles",
+    "identityProviders": {
+      "azureActiveDirectory": {
+        "registration": {
+          "openIdIssuer": "https://login.microsoftonline.com/7da3bdd9-bb92-4813-abbf-8367c2a1ce85/v2.0",
+          "clientIdSettingName": "AZURE_CLIENT_ID",
+          "clientSecretSettingName": "AZURE_CLIENT_SECRET"
+        }
+      }
+    }
+  },
+  "platform": {
+    "apiRuntime": "node:16"
+  },
+  "responseOverrides": {
+    "401": {
+      "redirect": "/.auth/login/aad?post_login_redirect_uri=.referrer",
+      "statusCode": 302
+    },
+    "404": {
+      "rewrite": "/404",
+      "statusCode": 404
+    }
+  }
+}

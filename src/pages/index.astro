@@ -1,0 +1,51 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import Center from "../components/Center.astro";
+import { meetups } from "../data/meta";
+
+const [nextMeetup] = meetups;
+---
+
+<style>
+  h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+  }
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+  }
+  p {
+    margin: 0.5rem 0;
+  }
+
+  .datetime {
+    color: var(--brand);
+  }
+</style>
+
+<Layout title="Main">
+  <Hero />
+  <Center>
+    <h2>Next Meetup: {nextMeetup.title}</h2>
+    <img src={nextMeetup.image} alt="Micro Frontends Meetup Teaser Image" />
+    <h3>🗓 Live on {nextMeetup.date}</h3>
+    <p class="datetime">
+      ⌚️ {
+        Object.entries(nextMeetup.time)
+          .map(([zone, time]) => `${time} ${zone}`)
+          .join(" / ")
+      }
+    </p>
+    <p>{nextMeetup.description}</p>
+    <p>Our guests in this episode:</p>
+    <ul>
+      {nextMeetup.guests.map(guest => (<li>{guest}</li>))}
+    </ul>
+    <p>🎞 Streamed live on <a href={nextMeetup.video}>YouTube</a>.</p>
+    <p>📢 More infos at <a href={nextMeetup.url}>meetup.com</a>.</p>
+  </Center>
+</Layout>

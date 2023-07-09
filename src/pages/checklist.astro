@@ -1,0 +1,92 @@
+---
+import Layout from "../layouts/TextLayout.astro";
+import Header from "../components/Header.astro";
+---
+
+<style>
+    p {
+        margin-left: 24px;
+        margin-right: 1rem;
+        margin-top: 1rem;
+        color: var(--secondary-color);
+        max-width: 900px;
+        text-align: justify;
+    }
+
+    h2 {
+        margin-left: 24px;
+        margin-top: 1.5rem;
+        font-size: 24px;
+        line-height: 1;
+        letter-spacing: -0.05em;
+        font-weight: 800;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+    }
+
+    li {
+        font-size: 1.2rem;
+        padding: 0;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+
+    li label {
+        cursor: pointer;
+    }
+
+    li input[type=checkbox] {
+        margin-right: 0.8rem;
+    }
+
+    @media (min-width: 768px) {
+        p,
+        h2 {
+            margin-left: var(--space-8x);
+        }
+    }
+</style>
+
+<Layout title="Checklist">
+    <Header
+        hero="Checklist"
+        description="The checklist when joining the stream of the Meetup group as a guest."
+    />
+
+    <p>
+        Regardless of whether you're streaming live, or recording — this
+        checklist can help to ensure you'll have the best possible streaming
+        experience.
+    </p>
+
+    <h2>Prerequisites</h2>
+
+    <ul>
+        <li><label><input type="checkbox" />🎙️ Use a dedicated microphone if possible</label></li>
+        <li><label><input type="checkbox" />🎧 Wear headphones to avoid echo and feedback</label></li>
+        <li><label><input type="checkbox" />📹 Use a reliable webcam</label></li>
+        <li><label><input type="checkbox" />🔦 Ensure you have good lighting</label></li>
+        <li><label><input type="checkbox" />💪🏽 Strong internet connection, wired connection if possible</label></li>
+    </ul>
+
+    <h2>Preparation</h2>
+
+    <ul>
+        <li><label><input type="checkbox" />🔌 Reboot your machine</label></li>
+        <li><label><input type="checkbox" />💻 Make sure you have your resolution set to 1920x1800 and 120% DPI</label></li>
+        <li><label><input type="checkbox" />🔕 Silence (or temporarily disable notifications)</label></li>
+        <li><label><input type="checkbox" />🕵️‍ Enable private browsing (Incognito/InPrivate mode) in your web browser</label></li>
+        <li><label><input type="checkbox" />🔗 Follow the Guest Instructions from <a href="https://streamyard.com/resources/docs/guest-instructions" target="_blank">StreamYard</a></label></li>
+    </ul>
+
+    <h2>For our Stream</h2>
+
+    <ul>
+        <li><label><input type="checkbox" />🕥 Arrive at least 15 minutes early</label></li>
+        <li><label><input type="checkbox" />⛔ Set status as "Do not disturb"</label></li>
+        <li><label><input type="checkbox" />📃 You've read the <a href="/code-of-conduct">Code of Conduct</a></label></li>
+    </ul>
+</Layout>
