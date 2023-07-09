@@ -22,6 +22,7 @@ jobs:
         run: |
           npm run build
           echo "meetup.microfrontends.cloud" > dist/CNAME
+          echo "# Disable Jekyll" > dist/.nojekyll
       - name: Deploy Website
         run: |
           git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
