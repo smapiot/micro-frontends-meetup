@@ -41,4 +41,23 @@ export const meetups = [
       "Dimitri Renault, CEO of Mekom Solution",
     ],
   },
+  {
+    title: "August 2023",
+    date: "2023-08-17",
+    image: 'https://secure.meetupstatic.com/photos/event/5/8/3/3/600_514642579.webp?w=384',
+    time: {
+      CET: "5pm",
+      PST: "8am",
+      IST: "8:30pm",
+      ACST: "12:30am",
+    },
+    url: "https://www.meetup.com/microfrontends/events/295008188/",
+    video: "https://www.youtube.com/watch?v=MN35_drIchE",
+    description:
+      "For this edition we invited two guests to show how they implemented frontend modularity and scalability into their projects and products. They will talk about their experience and why certain decisions have been relevant for their journey.",
+    guests: [
+      "Fatima AMZIL, Angular Frontend Tech Lead at OXYGEN TS",
+      "Manuel Römer, Software Engineer at smapiot",
+    ],
+  },
 ];
