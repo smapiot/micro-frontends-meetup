@@ -23,25 +23,6 @@ export const navigation = [
 ];
 export const meetups = [
   {
-    title: "July 2023",
-    date: "2023-07-13",
-    image: 'https://secure.meetupstatic.com/photos/event/6/6/5/b/600_513866203.webp?w=384',
-    time: {
-      CET: "5pm",
-      PST: "8am",
-      IST: "8:30pm",
-      ACST: "12:30am",
-    },
-    url: "https://www.meetup.com/microfrontends/events/294348865/",
-    video: "https://www.youtube.com/watch?v=ulgDjQuLq5k",
-    description:
-      "For this edition we invited two guests to share their journey into micro frontends. They will talk about their specific requirements, challenges, and achievements they crossed on their road towards scalable web development.",
-    guests: [
-      "Benjamin Schwendner, Product Architect at Axinom",
-      "Dimitri Renault, CEO of Mekom Solution",
-    ],
-  },
-  {
     title: "August 2023",
     date: "2023-08-17",
     image: 'https://secure.meetupstatic.com/photos/event/5/8/3/3/600_514642579.webp?w=384',
@@ -58,6 +39,25 @@ export const meetups = [
     guests: [
       "Fatima AMZIL, Angular Frontend Tech Lead at OXYGEN TS",
       "Manuel Römer, Software Engineer at smapiot",
+    ],
+  },
+  {
+    title: "July 2023",
+    date: "2023-07-13",
+    image: 'https://secure.meetupstatic.com/photos/event/6/6/5/b/600_513866203.webp?w=384',
+    time: {
+      CET: "5pm",
+      PST: "8am",
+      IST: "8:30pm",
+      ACST: "12:30am",
+    },
+    url: "https://www.meetup.com/microfrontends/events/294348865/",
+    video: "https://www.youtube.com/watch?v=ulgDjQuLq5k",
+    description:
+      "For this edition we invited two guests to share their journey into micro frontends. They will talk about their specific requirements, challenges, and achievements they crossed on their road towards scalable web development.",
+    guests: [
+      "Benjamin Schwendner, Product Architect at Axinom",
+      "Dimitri Renault, CEO of Mekom Solution",
     ],
   },
 ];
