@@ -23,9 +23,30 @@ export const navigation = [
 ];
 export const meetups = [
   {
+    title: "September 2023",
+    date: "2023-09-14",
+    image:
+      "https://secure.meetupstatic.com/photos/event/c/a/6/f/600_515631823.webp?w=384",
+    time: {
+      CET: "5pm",
+      PST: "8am",
+      IST: "8:30pm",
+      ACST: "12:30am",
+    },
+    url: "https://www.meetup.com/microfrontends/events/295889940",
+    video: "https://www.youtube.com/watch?v=T54dpuqqOSw",
+    description:
+      "For this edition we invited two guests to share their journey into micro frontends. They will talk about their specific requirements, challenges, and achievements they crossed on their road towards scalable web development.",
+    guests: [
+      "Aleksandar Mirilovic, Director Software Engineering at adidas",
+      "Matteo Pietro Dazzi, Senior Software Developer at NearForm",
+    ],
+  },
+  {
     title: "August 2023",
     date: "2023-08-17",
-    image: 'https://secure.meetupstatic.com/photos/event/5/8/3/3/600_514642579.webp?w=384',
+    image:
+      "https://secure.meetupstatic.com/photos/event/5/8/3/3/600_514642579.webp?w=384",
     time: {
       CET: "5pm",
       PST: "8am",
@@ -44,7 +65,8 @@ export const meetups = [
   {
     title: "July 2023",
     date: "2023-07-13",
-    image: 'https://secure.meetupstatic.com/photos/event/6/6/5/b/600_513866203.webp?w=384',
+    image:
+      "https://secure.meetupstatic.com/photos/event/6/6/5/b/600_513866203.webp?w=384",
     time: {
       CET: "5pm",
       PST: "8am",
