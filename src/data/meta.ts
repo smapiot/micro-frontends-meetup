@@ -23,6 +23,26 @@ export const navigation = [
 ];
 export const meetups = [
   {
+    title: "October 2023",
+    date: "2023-10-12",
+    image:
+      "https://secure.meetupstatic.com/photos/event/5/f/4/e/600_516384398.webp?w=384",
+    time: {
+      CET: "5pm",
+      PST: "8am",
+      IST: "8:30pm",
+      ACST: "12:30am",
+    },
+    url: "https://www.meetup.com/microfrontends/events/296598777",
+    video: "https://www.youtube.com/watch?v=MrtJD6_k500",
+    description:
+      "For this edition we invited two guests to share their journey into micro frontends. They will talk about their specific requirements, challenges, and achievements they crossed on their road towards scalable web development.",
+    guests: [
+      "Sandra Jurek, Frontend Engineer in JP Morgan Chase",
+      "Philipp Fehrmann, Consultant at Netlight",
+    ],
+  },
+  {
     title: "September 2023",
     date: "2023-09-14",
     image:
