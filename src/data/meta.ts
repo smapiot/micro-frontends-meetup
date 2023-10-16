@@ -23,6 +23,26 @@ export const navigation = [
 ];
 export const meetups = [
   {
+    title: "November 2023",
+    date: "2023-10-16",
+    image:
+      "https://secure.meetupstatic.com/photos/event/1/f/1/1/600_516607953.webp?w=750",
+    time: {
+      CET: "5pm",
+      PST: "8am",
+      IST: "8:30pm",
+      ACST: "12:30am",
+    },
+    url: "https://www.meetup.com/microfrontends/events/296766366",
+    video: "https://www.youtube.com/watch?v=A_bF4ol0l3k",
+    description:
+      "For this edition we invited two guests to talk about the current state of micro frontends. They will share their knowledge and insights about the available tools, frameworks, and experiences gathered from teams around the world. As a basis we'll use the data gathered from the State of Micro Frontends 2023 survey, as well as the Consequences of Micro Frontends survey.",
+    guests: [
+      "Manfred Steyer, Trainer and Consultant",
+      "Luca Mezzalira, Principal Solutions Architect at AWS",
+    ],
+  },
+  {
     title: "October 2023",
     date: "2023-10-12",
     image:
