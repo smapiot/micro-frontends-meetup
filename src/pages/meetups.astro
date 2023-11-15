@@ -2,52 +2,109 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Center from "../components/Center.astro";
-import { meetups } from "../data/meta";
+import { meetups } from "../data/meetups";
+import { toDate, dateSorter } from "../data/date";
 
-const [_current, ...previousMeetups] = meetups;
+const now = new Date();
+const previousMeetups = meetups.filter((m) => toDate(m.date) < now);
+const [currentMeetup, ...upcomingMeetups] = meetups
+  .filter((m) => toDate(m.date) >= now)
+  .sort(dateSorter);
+const currentMeetups = [currentMeetup];
 ---
 
 <style>
+  .meetup-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 0 var(--space-6x);
+  }
+
+  .meetup {
+    flex: 1 0 280px;
+    max-width: 280px;
+  }
+
+  @media (min-width: 768px) {
     .meetup-list {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
-        margin: 0 var(--space-6x);
+      margin: 0 var(--space-8x);
     }
-
-    .meetup {
-        flex: 1 0 280px;
-        max-width: 280px;
-    }
-
-    @media (min-width: 768px) {
-        .meetup-list {
-            margin: 0 var(--space-8x);
-        }
-    }
+  }
 </style>
 
 <Layout title="Main">
-    <Header
-        hero="Previous Meetups"
-        description="These meetups already happened. Their recordings are available on YouTube."
-    />
-    <div class="meetup-list">
-        {
-            previousMeetups.map((meetup) => (
-                <div class="meetup">
-                    <h2>{meetup.title}</h2>
-                    <a href={meetup.video} target="_blank">
-                        <img
-                            src={meetup.image}
-                            alt="Micro Frontends Meetup Teaser Image"
-                        />
-                    </a>
-                    <p>🕹 Aired on {meetup.date}.</p>
-                    <p>📢 Announcement at <a href={meetup.url} target="_blank">meetup.com</a>.</p>
-                </div>
-            ))
-        }
-    </div>
-    {previousMeetups.length === 0 && <Center>No previous meetups.</Center>}
+  <Header
+    hero="Current Meetup"
+    description="The next meetup. Register for the event meetup.com to be notified when the event is happening."
+  />
+  <div class="meetup-list">
+    {
+      currentMeetups.map((meetup) => (
+        <div class="meetup">
+          <h2>{meetup.title}</h2>
+          <a href={meetup.video} target="_blank">
+            <img src={meetup.image} alt="Micro Frontends Meetup Teaser Image" />
+          </a>
+          <p>🕹 Live on {meetup.date}.</p>
+          <p>
+            📢 Announcement at{" "}
+            <a href={meetup.url} target="_blank">
+              meetup.com
+            </a>
+            .
+          </p>
+        </div>
+      ))
+    }
+  </div>
+  <Header
+    hero="Upcoming Meetups"
+    description="The currently scheduled future meetups. Join the meetup group to be notified about changes."
+  />
+  <div class="meetup-list">
+    {
+      upcomingMeetups.map((meetup) => (
+        <div class="meetup">
+          <h2>{meetup.title}</h2>
+          <a href={meetup.video} target="_blank">
+            <img src={meetup.image} alt="Micro Frontends Meetup Teaser Image" />
+          </a>
+          <p>🕹 Scheduled for {meetup.date}.</p>
+          <p>
+            📢 Announcement at{" "}
+            <a href={meetup.url} target="_blank">
+              meetup.com
+            </a>
+            .
+          </p>
+        </div>
+      ))
+    }
+  </div>
+  <Header
+    hero="Previous Meetups"
+    description="These meetups already happened. Their recordings are available on YouTube."
+  />
+  <div class="meetup-list">
+    {
+      previousMeetups.map((meetup) => (
+        <div class="meetup">
+          <h2>{meetup.title}</h2>
+          <a href={meetup.video} target="_blank">
+            <img src={meetup.image} alt="Micro Frontends Meetup Teaser Image" />
+          </a>
+          <p>🕹 Aired on {meetup.date}.</p>
+          <p>
+            📢 Announcement at{" "}
+            <a href={meetup.url} target="_blank">
+              meetup.com
+            </a>
+            .
+          </p>
+        </div>
+      ))
+    }
+  </div>
+  {previousMeetups.length === 0 && <Center>No previous meetups.</Center>}
 </Layout>

@@ -2,9 +2,13 @@
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
 import Center from "../components/Center.astro";
-import { meetups } from "../data/meta";
+import { meetups } from "../data/meetups";
+import { toDate, dateSorter } from "../data/date";
 
-const [nextMeetup] = meetups;
+const now = new Date();
+const [nextMeetup] = meetups
+  .filter((m) => toDate(m.date) >= now)
+  .sort(dateSorter);
 ---
 
 <style>
@@ -29,23 +33,38 @@ const [nextMeetup] = meetups;
 
 <Layout title="Main">
   <Hero />
-  <Center>
-    <h2>Next Meetup: {nextMeetup.title}</h2>
-    <img src={nextMeetup.image} alt="Micro Frontends Meetup Teaser Image" />
-    <h3>🗓 Live on {nextMeetup.date}</h3>
-    <p class="datetime">
-      ⌚️ {
-        Object.entries(nextMeetup.time)
-          .map(([zone, time]) => `${time} ${zone}`)
-          .join(" / ")
-      }
-    </p>
-    <p>{nextMeetup.description}</p>
-    <p>Our guests in this episode:</p>
-    <ul>
-      {nextMeetup.guests.map(guest => (<li>{guest}</li>))}
-    </ul>
-    <p>🎞 Streamed live on <a href={nextMeetup.video}>YouTube</a>.</p>
-    <p>📢 More infos at <a href={nextMeetup.url}>meetup.com</a>.</p>
-  </Center>
+
+  {
+    nextMeetup ? (
+      <Center>
+        <h2>Next Meetup: {nextMeetup.title}</h2>
+        <img src={nextMeetup.image} alt="Micro Frontends Meetup Teaser Image" />
+        <h3>🗓 Live on {nextMeetup.date}</h3>
+        <p class="datetime">
+          ⌚️{" "}
+          {Object.entries(nextMeetup.time)
+            .map(([zone, time]) => `${time} ${zone}`)
+            .join(" / ")}
+        </p>
+        <p>{nextMeetup.description}</p>
+        <p>Our guests in this episode:</p>
+        <ul>
+          {nextMeetup.guests.map((guest) => (
+            <li>{guest}</li>
+          ))}
+        </ul>
+        <p>
+          🎞 Streamed live on <a href={nextMeetup.video}>YouTube</a>.
+        </p>
+        <p>
+          📢 More infos at <a href={nextMeetup.url}>meetup.com</a>.
+        </p>
+      </Center>
+    ) : (
+      <Center>
+        Nothing scheduled yet. Come back later or join our meetup group to be
+        notified when this changes.
+      </Center>
+    )
+  }
 </Layout>
