@@ -1,7 +1,7 @@
 export const meetups = [
   {
-    title: "December 2023",
-    date: "2023-12-14",
+    title: "January 2024",
+    date: "2023-01-18",
     image:
       "https://secure.meetupstatic.com/photos/event/a/f/1/9/600_517304825.webp?w=384",
     time: {
@@ -10,8 +10,27 @@ export const meetups = [
       IST: "11:30pm",
       ACST: "2:30am",
     },
+    url: "https://www.meetup.com/microfrontends/events/tbd",
+    video: "https://www.youtube.com/watch?v=tbd",
+    description:
+      "(tbd)",
+    guests: [
+      "tbd",
+    ],
+  },
+  {
+    title: "December 2023",
+    date: "2023-12-14",
+    image:
+      "https://secure.meetupstatic.com/photos/event/a/f/1/9/600_517304825.webp?w=384",
+    time: {
+      CET: "5pm",
+      PST: "8am",
+      IST: "9:30pm",
+      ACST: "12:30am",
+    },
     url: "https://www.meetup.com/microfrontends/events/297373513/",
-    video: "https://www.youtube.com/watch?v=FkomOOzb3V8",
+    video: "",
     description:
       "For this special edition which is themed 'Santa is bringing modules this year'. In this episode we have three talks covering modern concepts w.r.t. frontend scalability - from monorepos to micro frontends to islands and discovery services up to tooling independence and Bun.",
     guests: [
