@@ -1,21 +1,106 @@
 export const meetups = [
   {
-    title: "January 2024",
-    date: "2023-01-18",
+    title: "December 2024",
+    date: "2024-12-12",
     image:
-      "https://secure.meetupstatic.com/photos/event/a/f/1/9/600_517304825.webp?w=384",
+      "https://secure.meetupstatic.com/photos/event/d/d/c/600_522363548.webp?w=384",
     time: {
-      CET: "7pm",
-      PST: "10am",
-      IST: "11:30pm",
-      ACST: "2:30am",
+      CET: "4pm",
+      PST: "7am",
+      IST: "7:30pm",
+      ACST: "11:30pm",
     },
-    url: "https://www.meetup.com/microfrontends/events/tbd",
-    video: "https://www.youtube.com/watch?v=tbd",
+    url: "https://www.meetup.com/microfrontends/events/302267790/",
+    video: "",
     description:
-      "(tbd)",
-    guests: [
       "tbd",
+    guests: [],
+  },
+  {
+    title: "November 2024",
+    date: "2024-11-14",
+    image:
+      "https://secure.meetupstatic.com/photos/event/d/d/5/600_522363541.webp?w=384",
+    time: {
+      CET: "4pm",
+      PST: "7am",
+      IST: "7:30pm",
+      ACST: "11:30pm",
+    },
+    url: "https://www.meetup.com/microfrontends/events/302267780/",
+    video: "",
+    description:
+      "tbd",
+    guests: [],
+  },
+  {
+    title: "October 2024",
+    date: "2024-10-17",
+    image:
+      "https://secure.meetupstatic.com/photos/event/d/d/3/600_522363539.webp?w=384",
+    time: {
+      CET: "4pm",
+      PST: "7am",
+      IST: "7:30pm",
+      ACST: "11:30pm",
+    },
+    url: "https://www.meetup.com/microfrontends/events/302267771/",
+    video: "",
+    description:
+      "tbd",
+    guests: [],
+  },
+  {
+    title: "September 2024",
+    date: "2024-09-12",
+    image:
+      "https://secure.meetupstatic.com/photos/event/d/d/1/600_522363537.webp?w=384",
+    time: {
+      CET: "4pm",
+      PST: "7am",
+      IST: "7:30pm",
+      ACST: "11:30pm",
+    },
+    url: "https://www.meetup.com/microfrontends/events/302267765/",
+    video: "",
+    description:
+      "tbd",
+    guests: [],
+  },
+  {
+    title: "August 2024",
+    date: "2024-08-15",
+    image:
+      "https://secure.meetupstatic.com/photos/event/d/c/2/600_522363522.webp?w=384",
+    time: {
+      CET: "4pm",
+      PST: "7am",
+      IST: "7:30pm",
+      ACST: "11:30pm",
+    },
+    url: "https://www.meetup.com/microfrontends/events/302267756/",
+    video: "",
+    description:
+      "tbd",
+    guests: [],
+  },
+  {
+    title: "July 2024",
+    date: "2024-07-18",
+    image:
+      "https://secure.meetupstatic.com/photos/event/c/2/9/9/600_522349817.webp?w=384",
+    time: {
+      CET: "4pm",
+      PST: "7am",
+      IST: "7:30pm",
+      ACST: "11:30pm",
+    },
+    url: "https://www.meetup.com/microfrontends/events/302252473/",
+    video: "https://www.youtube.com/watch?v=_XPytuQrKaY",
+    description:
+      "For this edition we will focus on recent activities in the community and reflect on the Micro Frontends Conference 2024. The main topic for this edition is Picard.js. Together, we'll build a new application using Micro Frontends from the ground up. We'll see how Picard.js can help us to get the job done - and what benefits await us. In the new application we'll also integrate some existing micro frontends - just to show that Picard.js is not a replacement, but rather an addition to the how you develop micro frontends.",
+    guests: [
+      "Florian Rappl, Solution Architect at smapiot",
     ],
   },
   {
@@ -30,7 +115,7 @@ export const meetups = [
       ACST: "12:30am",
     },
     url: "https://www.meetup.com/microfrontends/events/297373513/",
-    video: "",
+    video: "https://www.youtube.com/watch?v=FkomOOzb3V8",
     description:
       "For this special edition which is themed 'Santa is bringing modules this year'. In this episode we have three talks covering modern concepts w.r.t. frontend scalability - from monorepos to micro frontends to islands and discovery services up to tooling independence and Bun.",
     guests: [
