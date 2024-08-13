@@ -81,7 +81,7 @@ export const meetups = [
     url: "https://www.meetup.com/microfrontends/events/302267756/",
     video: "https://www.youtube.com/watch?v=NKoQz-3MbIs",
     description:
-      "The topic for this edition is 'Battle of The Bees - Comparing Module Federation to Native Federation and Piral'. Together, we'll build a new micro frontend using Module Federation, then we'll add another one using Native Federation, and finally we'll go for Piral. We'll compare the different approaches and see which advantages and disadvantages come wit the different solutions.",
+      "The topic for this edition is 'Battle of The Bees - Comparing Module Federation to Native Federation and Piral'. Together, we'll build a new micro frontend using Module Federation, then we'll add another one using Native Federation, and finally we'll go for Piral. We'll compare the different approaches and see which advantages and disadvantages come with the different solutions.",
     guests: [
       "Florian Rappl, Solution Architect at smapiot",
     ],
