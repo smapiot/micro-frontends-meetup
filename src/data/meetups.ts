@@ -79,10 +79,12 @@ export const meetups = [
       ACST: "11:30pm",
     },
     url: "https://www.meetup.com/microfrontends/events/302267756/",
-    video: "",
+    video: "https://www.youtube.com/watch?v=NKoQz-3MbIs",
     description:
-      "tbd",
-    guests: [],
+      "The topic for this edition is 'Battle of The Bees - Comparing Module Federation to Native Federation and Piral'. Together, we'll build a new micro frontend using Module Federation, then we'll add another one using Native Federation, and finally we'll go for Piral. We'll compare the different approaches and see which advantages and disadvantages come wit the different solutions.",
+    guests: [
+      "Florian Rappl, Solution Architect at smapiot",
+    ],
   },
   {
     title: "July 2024",
@@ -101,6 +103,7 @@ export const meetups = [
       "For this edition we will focus on recent activities in the community and reflect on the Micro Frontends Conference 2024. The main topic for this edition is Picard.js. Together, we'll build a new application using Micro Frontends from the ground up. We'll see how Picard.js can help us to get the job done - and what benefits await us. In the new application we'll also integrate some existing micro frontends - just to show that Picard.js is not a replacement, but rather an addition to the how you develop micro frontends.",
     guests: [
       "Florian Rappl, Solution Architect at smapiot",
+      "Florian Weininger, Solution Engineer at smapiot",
     ],
   },
   {
