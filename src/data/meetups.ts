@@ -62,10 +62,12 @@ export const meetups = [
       ACST: "11:30pm",
     },
     url: "https://www.meetup.com/microfrontends/events/302267765/",
-    video: "",
+    video: "https://www.youtube.com/watch?v=HCvMLOOLoMA",
     description:
-      "tbd",
-    guests: [],
+      `The topic for this edition is "Building Micro Frontends using Blazor and Piral Framework". With our guest Devon Wijesinghe, who is a Tech Lead @ 99x, we'll go over his experience of building a modern modular scalable web application using Blazor and Piral. Specifically, we'll go over the details, as well as the sample project outlined in his article.`,
+    guests: [
+      "Devon Wijesinghe, Tech Lead at 99x",
+    ],
   },
   {
     title: "August 2024",
