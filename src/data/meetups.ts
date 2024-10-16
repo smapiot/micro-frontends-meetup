@@ -12,8 +12,7 @@ export const meetups = [
     },
     url: "https://www.meetup.com/microfrontends/events/302267790/",
     video: "",
-    description:
-      "tbd",
+    description: "tbd",
     guests: [],
   },
   {
@@ -29,8 +28,7 @@ export const meetups = [
     },
     url: "https://www.meetup.com/microfrontends/events/302267780/",
     video: "",
-    description:
-      "tbd",
+    description: "tbd",
     guests: [],
   },
   {
@@ -45,10 +43,10 @@ export const meetups = [
       ACST: "11:30pm",
     },
     url: "https://www.meetup.com/microfrontends/events/302267771/",
-    video: "",
+    video: "https://www.youtube.com/watch?v=cTxES0uWpIE",
     description:
-      "tbd",
-    guests: [],
+      "In this episode we'll look at how a scalable portal application can be created with the help of micro frontends. In particular, we look at a tech stack involving Tailwind CSS, shadcn/ui, and React - with components scaffolded by v0. Together we'll build a full portal with some micro frontends in minutes - demonstrating how efficiently this tech stack can be used to deliver values as fast as possible.",
+    guests: ["Florian Rappl, Solution Architect at smapiot"],
   },
   {
     title: "September 2024",
@@ -63,11 +61,8 @@ export const meetups = [
     },
     url: "https://www.meetup.com/microfrontends/events/302267765/",
     video: "https://www.youtube.com/watch?v=HCvMLOOLoMA",
-    description:
-      `The topic for this edition is "Building Micro Frontends using Blazor and Piral Framework". With our guest Devon Wijesinghe, who is a Tech Lead @ 99x, we'll go over his experience of building a modern modular scalable web application using Blazor and Piral. Specifically, we'll go over the details, as well as the sample project outlined in his article.`,
-    guests: [
-      "Devon Wijesinghe, Tech Lead at 99x",
-    ],
+    description: `The topic for this edition is "Building Micro Frontends using Blazor and Piral Framework". With our guest Devon Wijesinghe, who is a Tech Lead @ 99x, we'll go over his experience of building a modern modular scalable web application using Blazor and Piral. Specifically, we'll go over the details, as well as the sample project outlined in his article.`,
+    guests: ["Devon Wijesinghe, Tech Lead at 99x"],
   },
   {
     title: "August 2024",
@@ -84,9 +79,7 @@ export const meetups = [
     video: "https://www.youtube.com/watch?v=NKoQz-3MbIs",
     description:
       "The topic for this edition is 'Battle of The Bees - Comparing Module Federation to Native Federation and Piral'. Together, we'll build a new micro frontend using Module Federation, then we'll add another one using Native Federation, and finally we'll go for Piral. We'll compare the different approaches and see which advantages and disadvantages come with the different solutions.",
-    guests: [
-      "Florian Rappl, Solution Architect at smapiot",
-    ],
+    guests: ["Florian Rappl, Solution Architect at smapiot"],
   },
   {
     title: "July 2024",
