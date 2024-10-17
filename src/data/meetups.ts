@@ -35,7 +35,7 @@ export const meetups = [
     title: "October 2024",
     date: "2024-10-17",
     image:
-      "https://secure.meetupstatic.com/photos/event/d/d/3/600_522363539.webp?w=384",
+      "https://secure.meetupstatic.com/photos/event/2/f/1/2/600_524112050.webp?w=384",
     time: {
       CET: "4pm",
       PST: "7am",
