@@ -23,13 +23,14 @@ export const meetups = [
     time: {
       CET: "4pm",
       PST: "7am",
-      IST: "7:30pm",
-      ACST: "11:30pm",
+      IST: "8:30pm",
+      ACST: "12:30am",
     },
     url: "https://www.meetup.com/microfrontends/events/302267780/",
-    video: "",
-    description: "tbd",
-    guests: [],
+    video: "https://www.youtube.com/watch?v=tbjvFWNHWyM",
+    description:
+      "In this edition we'll look at how modular structures do not stop at the frontend. We'll see some options that we have for a cell-based architecture where each part - independent if its assigned to frontend or backend - can be deployed, maintained, and scaled independently. Our goal is to create solutions that are flexible, secure, resource-efficient, and easy to maintain.",
+    guests: ["Florian Rappl, Solution Architect at smapiot"],
   },
   {
     title: "October 2024",
