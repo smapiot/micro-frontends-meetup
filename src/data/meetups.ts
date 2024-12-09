@@ -11,9 +11,9 @@ export const meetups = [
       ACST: "11:30pm",
     },
     url: "https://www.meetup.com/microfrontends/events/302267790/",
-    video: "",
-    description: "tbd",
-    guests: [],
+    video: "https://www.youtube.com/watch?v=OJ4riGDpEKw",
+    description: "In this special episode we'll have some raffles and giveaways. Tune in to participate! For the end of the year we look at some of the highlights in this year in the micro frontend space, e.g., Module Federation v2, Picard.js and SSR for Native Federation, as well as things you can do using a micro frontends discovery service.",
+    guests: ["Florian Rappl, Solution Architect at smapiot"],
   },
   {
     title: "November 2024",
